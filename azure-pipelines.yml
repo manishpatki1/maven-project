@@ -23,6 +23,7 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 - task: PublishBuildArtifacts@1
+  displayName: publishArtifacts
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
