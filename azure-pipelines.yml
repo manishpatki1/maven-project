@@ -20,9 +20,8 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: PublishBuildArtifacts@1
-  displayName: Publishartifats
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    targetPath: '$(System.DefaultWorkingDirectory)/_manishpatki1.maven-project/drop/target/webapp.war'
+    artifact: 'webapp.war'
+    publishLocation: 'pipeline'
