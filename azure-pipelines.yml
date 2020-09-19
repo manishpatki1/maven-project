@@ -22,6 +22,6 @@ steps:
     sonarQubeRunAnalysis: false
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/_manishpatki1.maven-project/drop/target/'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
