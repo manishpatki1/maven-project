@@ -25,4 +25,12 @@ steps:
     PathtoPublish: '$(System.DefaultWorkingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
+- task: Docker@2
+  inputs:
+    repository: 'demomanishacr.azurecr.io'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
   
